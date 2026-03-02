@@ -94,6 +94,28 @@
         <li><strong>Camera:</strong> For face tracking to control gameplay. The camera feed is processed locally on your device and is never recorded, stored, or transmitted unless you explicitly choose to record a gameplay video.</li>
         <li><strong>Microphone:</strong> Only used when you choose to record gameplay videos with audio. Audio is stored locally on your device and is never transmitted to us.</li>
     </ul>
+
+    <h2>TrueDepth API and Face Data</h2>
+    <p>Mindfly uses Apple's TrueDepth camera and ARKit framework for gameplay and optional personalization features. Here is exactly what is collected and how it is used:</p>
+
+    <h3>Real-Time Gameplay Tracking</h3>
+    <p>During gameplay, the app reads head orientation (yaw and pitch) and two facial expression values (jaw open and cheek puff) to move the player character and trigger in-game abilities. This numerical tracking data is:</p>
+    <ul>
+        <li>Processed <strong>entirely on your device</strong> within Apple's ARKit framework</li>
+        <li>Held in <strong>temporary memory only</strong> during an active game session</li>
+        <li><strong>Never written to disk</strong> or stored persistently</li>
+        <li><strong>Never transmitted</strong> to any server or third party</li>
+        <li><strong>Never used</strong> for facial recognition, user identification, or authentication</li>
+        <li><strong>Immediately discarded</strong> when the gameplay session ends</li>
+    </ul>
+
+    <h3>Optional Gameplay Recording</h3>
+    <p>If you choose to record gameplay with the face overlay feature enabled, camera frames from the TrueDepth session are temporarily stored in device memory and composited into a video file saved locally on your device. This video is <strong>never uploaded or shared automatically</strong> — it is only shared if you explicitly choose to do so using the iOS share sheet. You may disable the face overlay at any time by toggling the face icon in the recording controls, which results in screen-only recording where your face does not appear in the saved video.</p>
+
+    <h3>Optional Character Personalization</h3>
+    <p>You may optionally capture a photo of your face from the TrueDepth camera session to use as a custom face on your in-game character. This photo is processed on-device (background removal) and saved locally in the app's storage on your device. Saved face photos are <strong>never transmitted to any server or third party</strong>. You can view and permanently delete any saved face at any time from the Saved Faces gallery within the app.</p>
+
+    <p>No facial maps, meshes, or biometric identification data are collected or retained at any time by any feature of the app.</p>
     
     <h2>Third-Party Services</h2>
     
